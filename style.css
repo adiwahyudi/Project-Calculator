@@ -1,7 +1,10 @@
+body{
+    background: linear-gradient(to right, #43C6AC, #191654)
+}
 .calculator{
     text-align:center;
     margin: 0 auto;
-    padding-top: 200px;
+    padding: 200px;
     width: 400px;
 }
 

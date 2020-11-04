@@ -4,6 +4,7 @@ numbers.forEach((number) => {
     number.addEventListener("click",(event) => {
         inputNumber(event.target.value)
         updateScreen(currentNumber)
+        console.log(currentNumber)
         console.log("screen updated!")
     })
 })
@@ -56,7 +57,7 @@ const calculate = () =>{
     let result = ''
     switch(calculationOperator){
         case "+":
-            result = parseInt(prevNumber) + parseInt(currentNumber)
+            result = parseFloat(prevNumber) + parseFloat(currentNumber)
             break
         case "-":
             result = prevNumber - currentNumber
@@ -105,4 +106,16 @@ decimal.addEventListener('click', (event) => {
     inputDecimal(event.target.value)
     updateScreen(currentNumber)
     console.log('decimal clicked')
+})
+// Persen
+const persen = document.querySelector('.percentage')
+
+persen1 = () => {
+    currentNumber = parseFloat(currentNumber)/100
+}
+
+persen.addEventListener('click',(event)=>{
+    persen1(event.target.value)
+    updateScreen(currentNumber)
+    console.log("a")
 })
